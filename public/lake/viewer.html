@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>语雀阅读器</title>
+  <link rel="stylesheet" href="./doc.css"/>
+  <link rel="stylesheet" href="./antd.css"/>
+  <style>
+    html, body, #root { margin: 0; height: auto !important; min-height: 0 !important; background: transparent; }
+    .ne-editor,
+    .ne-editor-wrap,
+    .ne-editor-wrap-content,
+    .ne-editor-outer-wrap-box,
+    .ne-engine,
+    .ne-engine-view {
+      height: auto !important;
+      min-height: 0 !important;
+    }
+    .ne-layout-mode-fixed .ne-editor-wrap,
+    .ne-layout-mode-adapt .ne-editor-wrap { padding: 0 !important; }
+    .ne-layout-mode-fixed .ne-engine,
+    .ne-layout-mode-adapt .ne-engine {
+      padding: 8px 0 8px !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+    }
+    .ne-ui-toolbar, .toolbar-container { display: none !important; }
+    ne-card[data-card-name='file'],
+    .ne-card-file { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="./viewer-bridge.js"></script>
+  <script src="./react.production.min.js"></script>
+  <script src="./react-dom.production.min.js"></script>
+  <script src="./CodeMirror.js"></script>
+  <script src="./kitchen.js"></script>
+  <script src="./doc.umd.js"></script>
+</body>
+</html>

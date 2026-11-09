@@ -1,0 +1,99 @@
+/* The Lake editor lives in an iframe, so it cannot inherit the site's theme. */
+html.dark {
+  color-scheme: dark;
+  background: #171a20;
+}
+
+html.dark body,
+html.dark #root {
+  background: #171a20;
+  color: #f2f3f6;
+}
+
+html.dark .lakex-default-theme,
+html.dark .ne-editor {
+  --lakex-editor-background: #171a20;
+  --lakex-editor-background-primary: #171a20;
+  --lakex-editor-background-secondary: #20242b;
+  --lakex-editor-background-tertiary: #292e37;
+  --lakex-editor-background-focus: #303744;
+  --lakex-editor-background-primary-hover: #292e37;
+  --lakex-editor-background-primary-hover-light: #252a32;
+  --lakex-editor-background-foreground: #f2f3f6;
+  --lakex-editor-overlay-background-tertiary: #292e37;
+  --lakex-editor-text-color: #f2f3f6;
+  --lakex-editor-text-body: #e4e7ec;
+  --lakex-editor-text-caption: #a5aebb;
+  --lakex-editor-text-disable: #747e8d;
+  --lakex-editor-text-link: #80b8ff;
+  --lakex-editor-text-link-hover: #acd0ff;
+  --lakex-editor-icon-primary: #e4e7ec;
+  --lakex-editor-icon-secondary: #a5aebb;
+  --lakex-editor-border-primary: #3b424d;
+  --lakex-editor-border-secondary: #313842;
+  --lakex-editor-border-light: #2b313a;
+  --lakex-editor-code-background: #20242b;
+  --lakex-editor-card-background-hover: #292e37;
+  --lakex-editor-card-border-hover: #495466;
+  --lakex-editor-selection: #365579;
+  --lakex-editor-cursor: #f2f3f6;
+}
+
+html.dark .ne-editor,
+html.dark .ne-editor-wrap,
+html.dark .ne-editor-wrap-content,
+html.dark .ne-editor-outer-wrap-box,
+html.dark .ne-engine,
+html.dark .ne-ui,
+html.dark .ne-ui-toolbar,
+html.dark .ne-ui-inner-toolbar {
+  background-color: #171a20;
+  color: #e4e7ec;
+}
+
+html.dark .ne-engine,
+html.dark .ne-engine-view,
+html.dark .ne-ui-overlay,
+html.dark textarea,
+html.dark input,
+html.dark #doc-title {
+  color: #f2f3f6;
+  caret-color: #f2f3f6 !important;
+}
+
+html.dark #doc-title::placeholder,
+html.dark .hint {
+  color: #a5aebb;
+}
+
+html.dark .ne-ui-toolbar,
+html.dark .ne-ui-inner-toolbar {
+  border-color: #313842;
+}
+
+html.dark .ant-dropdown-menu,
+html.dark .ant-popover-inner,
+html.dark .ant-select-dropdown,
+html.dark #block-menu {
+  background: #252a32;
+  border-color: #3b424d;
+  color: #e4e7ec;
+}
+
+html.dark .ant-dropdown-menu-item,
+html.dark .ant-select-dropdown-menu-item,
+html.dark .ant-popover-inner-content,
+html.dark #block-menu button {
+  color: #e4e7ec;
+}
+
+html.dark .ant-dropdown-menu-item:hover,
+html.dark .ant-select-dropdown-menu-item:hover,
+html.dark #block-menu button:hover,
+html.dark #block-menu button:focus {
+  background: #343c48;
+}
+
+html.dark #block-menu .block-menu-sep {
+  background: #3b424d;
+}

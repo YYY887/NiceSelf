@@ -1,0 +1,19 @@
+:root {
+  --syntax-comment: oklch(0.556 0 0);
+  --syntax-keyword: oklch(0.49 0.2 292);
+  --syntax-string: oklch(0.45 0.13 153);
+  --syntax-function: oklch(0.48 0.15 255);
+  --syntax-number: oklch(0.53 0.16 55);
+  --syntax-property: oklch(0.48 0.14 20);
+  --syntax-punctuation: oklch(0.4 0 0);
+}
+
+.dark {
+  --syntax-comment: oklch(0.708 0 0);
+  --syntax-keyword: oklch(0.75 0.16 292);
+  --syntax-string: oklch(0.76 0.13 153);
+  --syntax-function: oklch(0.76 0.12 255);
+  --syntax-number: oklch(0.78 0.13 65);
+  --syntax-property: oklch(0.75 0.12 20);
+  --syntax-punctuation: oklch(0.78 0 0);
+}

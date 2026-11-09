@@ -1,0 +1,141 @@
+/* Match the Markdown article's CodeBlock card while retaining Lake's content. */
+ne-card[data-card-name="codeblock"] {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 1.5rem 0 !important;
+  overflow: hidden !important;
+  border: 1px solid var(--code-block-border) !important;
+  border-radius: 16px !important;
+  background: var(--code-block-bg) !important;
+  color: var(--code-block-fg) !important;
+}
+
+ne-card[data-card-name="codeblock"] .ne-card-container {
+  display: block !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+ne-card[data-card-name="codeblock"] .ne-codeblock {
+  overflow: hidden;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background: var(--code-block-bg) !important;
+  color: var(--code-block-fg) !important;
+}
+
+ne-card[data-card-name="codeblock"] .codeblock-menu {
+  min-height: 2.25rem;
+  height: auto !important;
+  margin: 0 !important;
+  border-bottom: 1px solid var(--code-block-border);
+  padding: 0.35rem 0.75rem !important;
+  background: var(--code-block-head) !important;
+  border-radius: 15px 15px 0 0 !important;
+  color: var(--muted-foreground) !important;
+}
+
+ne-card[data-card-name="codeblock"] .codeblock-menu .start-nav {
+  display: flex !important;
+  min-width: 0;
+  padding-left: 0 !important;
+}
+
+ne-card[data-card-name="codeblock"] .CodeMirror-code-name {
+  overflow: hidden;
+  color: var(--muted-foreground) !important;
+  font-size: 0.8125rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+ne-card[data-card-name="codeblock"] .ne-codeblock-collapsed-button,
+ne-card[data-card-name="codeblock"] .ne-codeblock-mode-name,
+ne-card[data-card-name="codeblock"] .ne-embed-nav-divider,
+ne-card[data-card-name="codeblock"] .cm-gutters {
+  display: none !important;
+}
+
+ne-card[data-card-name="codeblock"] .codeblock-menu .end-nav {
+  margin-left: auto;
+  padding-right: 0 !important;
+}
+
+ne-card[data-card-name="codeblock"] .ne-codeblock-copy {
+  min-width: 3.5rem;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border-radius: 4px;
+  padding: 0.25rem 0.4rem !important;
+  color: var(--muted-foreground) !important;
+  font-size: 0 !important;
+  cursor: pointer;
+}
+
+ne-card[data-card-name="codeblock"] .ne-codeblock-copy:hover,
+ne-card[data-card-name="codeblock"] .ne-codeblock-copy:focus-visible {
+  background: var(--muted) !important;
+  color: var(--foreground) !important;
+}
+
+ne-card[data-card-name="codeblock"] .ne-codeblock-copy .ne-icon {
+  display: none !important;
+}
+
+ne-card[data-card-name="codeblock"] .ne-codeblock-copy::before {
+  content: "";
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.875rem;
+  flex: none;
+  background: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='8' y='8' width='13' height='13' rx='2'/%3E%3Cpath d='M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+ne-card[data-card-name="codeblock"] .ne-codeblock-copy::after {
+  content: "复制";
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+ne-card[data-card-name="codeblock"] .ne-codeblock-copy[data-copied="true"]::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m20 6-11 11-5-5'/%3E%3C/svg%3E");
+}
+
+ne-card[data-card-name="codeblock"] .ne-codeblock-inner,
+ne-card[data-card-name="codeblock"] .cm-editor,
+ne-card[data-card-name="codeblock"] .cm-scroller,
+ne-card[data-card-name="codeblock"] .cm-content,
+ne-card[data-card-name="codeblock"] .cm-line {
+  background: var(--code-block-bg) !important;
+  color: var(--code-block-fg) !important;
+}
+
+ne-card[data-card-name="codeblock"] .ne-codeblock-inner {
+  padding: 0 !important;
+  border-radius: 0 0 15px 15px !important;
+}
+
+ne-card[data-card-name="codeblock"] .cm-content {
+  padding: 0.85rem 1rem 1rem !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+ne-card[data-card-name="codeblock"] .cm-scroller {
+  padding: 0 !important;
+}
+
+ne-card[data-card-name="codeblock"] .cm-line * {
+  color: var(--code-block-fg) !important;
+}
