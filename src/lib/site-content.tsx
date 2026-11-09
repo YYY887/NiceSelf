@@ -38,7 +38,7 @@ const fallback: SiteContent = {
     logoUrl: "",
     screenshots: ["/projects/qianqiu-myself/home.png"],
     videos: [],
-    siteUrl: "/",
+    siteUrl: "https://qianqiu.dev",
     siteLabel: "查看网站",
     repoUrl: "",
     repoLabel: "代码仓库",
