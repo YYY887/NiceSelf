@@ -4,6 +4,22 @@
 
 React + TypeScript + Vite 前台，Go + SQLite 内容 API。界面使用 Tailwind CSS v4 与 shadcn/ui。线上使用 Cloudflare Workers + D1 + R2，本地用 Go + SQLite。
 
+## 界面预览
+
+**首页**：点阵涟漪首屏，顶部可切换日夜主题，下方是文章与项目入口。
+
+![首页](public/projects/qianqiu-myself/home.png)
+
+**文章阅读页**：左侧章节目录可折叠，代码块带高亮与复制按钮，右侧是正文。
+
+![文章阅读页](public/projects/qianqiu-myself/note.png)
+
+**项目展示页**：项目封面与截图图库，竖屏截图自动套手机相框。
+
+![项目展示页](public/projects/qianqiu-myself/project.png)
+
+这三张图放在 `public/projects/qianqiu-myself/`，既是文档配图，也是站点自带的示例项目图：前端请求 `/projects/qianqiu-myself/home.png` 就能直接拿到，`home.png` 同时用作内置示例项目的封面。换成自己的截图时保持同名同路径，或者到后台「项目」里上传新图并在 `src/lib/site-content.tsx` 更新示例地址。
+
 ## 一键部署到 Cloudflare
 
 点上面的按钮就能把自己的站点跑起来：Cloudflare 会把这个仓库复制到你自己的 GitHub 账号，自动新建 D1 数据库和 R2 存储桶并绑定，跑完 D1 初始化脚本后部署 Worker，全程不需要本地装任何东西。
