@@ -120,7 +120,7 @@ export function AdminPage() {
             {section === "overview" && <AdminDashboard content={content} comments={comments} onSelect={selectSection} />}
             {section === "projects" && <ProjectEditor projects={content.projects} uploads={uploads} refresh={refresh} />}
             {section === "taxonomy" && <TaxonomyEditor categories={content.categories} tags={content.tags} refresh={refresh} />}
-            {section === "files" && <AssetManager uploads={uploads} refresh={refresh} />}
+            {section === "files" && <AssetManager uploads={uploads} content={content} refresh={refresh} />}
             {section === "comments" && <CommentModeration comments={comments} articles={content.articles} refresh={refresh} />}
             {section === "backups" && <BackupManager backups={backups} refresh={refresh} />}
             {section === "settings" && <SiteSettingsEditor settings={content.settings} user={user} refresh={refresh} />}

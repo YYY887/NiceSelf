@@ -132,7 +132,7 @@ app.get("/api/auth/github/callback", async (c) => {
   const secure = publicURL(c).startsWith("https://")
   if (!cookie || cookie !== c.req.query("state")) fail(400, "GitHub 登录状态无效，请重新登录")
   deleteCookie(c, "qianqiu_oauth_state", { path: "/api/auth/github/callback", secure, sameSite: "Lax" })
-  let returnTo = "/"
+  let returnTo: string
   try {
     returnTo = safeReturnTo(decodeURIComponent(getCookie(c, "qianqiu_oauth_return") || "/"))
   } catch {
@@ -406,15 +406,8 @@ app.get("/api/uploads/:name", async (c) => {
   if (!object) return c.notFound()
   if (object.range) {
     const size = object.size
-    let start = 0
-    let length = size
-    if ("suffix" in object.range) {
-      length = object.range.suffix
-      start = Math.max(0, size - length)
-    } else {
-      start = object.range.offset ?? 0
-      length = object.range.length ?? Math.max(0, size - start)
-    }
+    const start = "suffix" in object.range ? Math.max(0, size - object.range.suffix) : object.range.offset ?? 0
+    const length = "suffix" in object.range ? object.range.suffix : object.range.length ?? Math.max(0, size - start)
     const end = start + length - 1
     headers.set("Content-Range", `bytes ${start}-${end}/${size}`)
     headers.set("Content-Length", String(length))

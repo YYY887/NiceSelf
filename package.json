@@ -28,6 +28,7 @@
     "dev:api": "cd server && go run ./cmd/api",
     "dev:full": "concurrently -k -n api,web \"npm:dev:api\" \"npm:dev\"",
     "test:api": "cd server && go test ./...",
+    "test:lib": "node scripts/run-lib-test.mjs",
     "dev:worker": "wrangler dev",
     "deploy": "npm run build && wrangler deploy && node scripts/capture-deploy.mjs",
     "deploy:cf": "npm run db:migrate:remote && wrangler deploy && node scripts/capture-deploy.mjs",
